@@ -92,3 +92,7 @@ Test counts, the 30 acceptance criteria and what still needs a real-network pilo
 * Payments activate **only after provider verification**; callbacks are signature-checked, idempotent, and never trusted alone; refunds are never faked.
 * Authorization is server-side on every route (default-deny); staff cannot browse private media without a four-eyes, time-boxed, audited grant; admin has mandatory 2FA and step-up for risky actions; audit log is append-only and hash-chained.
 * Lifecycle, retention, deletion and legal hold are real backend state machines with evidence.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
