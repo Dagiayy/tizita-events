@@ -1,0 +1,40 @@
+groups:
+  - name: event-platform
+    rules:
+      - alert: MediaProcessingBacklog
+        expr: queue_jobs{queue="media-process",state="waiting"} > 200
+        for: 5m
+        labels: { severity: page }
+        annotations: { summary: "Media processing backlog above 200 jobs for 5 minutes", runbook: "docs/DEPLOYMENT.md#workers" }
+      - alert: MediaProcessingStuck
+        expr: media_processing_backlog > 0 and rate(media_processed_total[10m]) == 0
+        for: 10m
+        labels: { severity: page }
+        annotations: { summary: "Media is waiting but nothing was processed for 10 minutes (workers down?)" }
+      - alert: FailedMediaJobs
+        expr: increase(queue_jobs{queue="media-process",state="failed"}[15m]) > 20
+        labels: { severity: warn }
+        annotations: { summary: "Many media jobs failing" }
+      - alert: ExportBacklog
+        expr: queue_jobs{queue="export",state="waiting"} > 10
+        for: 15m
+        labels: { severity: warn }
+        annotations: { summary: "Exports are queueing up" }
+      - alert: PaymentProviderOutage
+        expr: increase(payment_callbacks_total{outcome="provider_outage"}[10m]) > 3
+        labels: { severity: page }
+        annotations: { summary: "Payment verification failing - callbacks cannot be verified" }
+      - alert: InvalidPaymentSignatures
+        expr: increase(payment_callbacks_total{outcome="rejected_signature"}[10m]) > 5
+        labels: { severity: page }
+        annotations: { summary: "Repeated invalid payment callback signatures (possible forgery attempt)" }
+      - alert: ApiErrorRate
+        expr: sum(rate(http_request_duration_seconds_count{status=~"5.."}[5m])) / sum(rate(http_request_duration_seconds_count[5m])) > 0.02
+        for: 5m
+        labels: { severity: page }
+        annotations: { summary: "API 5xx rate above 2%" }
+      - alert: ApiLatencyP95
+        expr: histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le)) > 1.5
+        for: 10m
+        labels: { severity: warn }
+        annotations: { summary: "API p95 latency above 1.5s" }

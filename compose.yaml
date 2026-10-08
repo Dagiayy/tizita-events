@@ -1,0 +1,5 @@
+# Convenience entry point so plain `docker compose ...` works from the repo root:
+#   docker compose --profile app up -d --build        (reads ./.env)
+# Same services as infra/docker-compose.yml (see its header for profiles).
+include:
+  - path: infra/docker-compose.yml

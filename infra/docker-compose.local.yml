@@ -1,0 +1,25 @@
+# Local full-stack override (HTTP, sandbox payments, no TLS). NEVER use in production.
+#   docker compose -f infra/docker-compose.yml -f infra/docker-compose.local.yml --env-file .env --profile app up -d --build
+# App: http://localhost:8080   API: http://localhost:8080/v1/...
+services:
+  migrate: &local
+    environment: &localenv
+      APP_ENV: development
+      NODE_ENV: development
+      PUBLIC_WEB_URL: http://localhost:8080
+      PUBLIC_API_URL: http://localhost:8080
+      CORS_ORIGINS: http://localhost:8080
+      PAYMENT_CALLBACK_BASE_URL: http://api:4000
+      AV_MODE: eicar
+      PAYMENT_PROVIDER: sandbox
+      SMS_PROVIDERS: console
+      OTP_FIXED_CODE: "123456"
+      RATE_LIMIT_OTP_PER_IP: "1000"      # local testing only; production keeps the strict defaults
+      RATE_LIMIT_OTP_PER_PHONE: "100"
+      RATE_LIMIT_OTP_VERIFY_PER_PHONE: "100"
+      TRUST_PROXY: "true"
+  api: { environment: *localenv }
+  worker: { environment: *localenv }
+  nginx:
+    ports: !override ["8080:80"]
+    volumes: !override ["./nginx/nginx.local.conf:/etc/nginx/nginx.conf:ro"]

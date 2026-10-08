@@ -1,0 +1,15 @@
+{
+  "name": "Event Photos",
+  "short_name": "Event Photos",
+  "description": "Share event photos in one private live gallery",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#e60023",
+  "lang": "en",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

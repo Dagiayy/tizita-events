@@ -1,0 +1,203 @@
+{
+  "@@locale": "en",
+  "appName": "EventSnap",
+  "tagline": "Capture  ·  Share  ·  Relive",
+  "events": "My events",
+  "noEvents": "No events yet. Scan a QR code or enter a code to join.",
+  "joinEvent": "Join an event",
+  "scanQr": "Scan QR code",
+  "enterCode": "Enter code or link",
+  "codeOrLinkHint": "Join code or link",
+  "codeOrLinkLabel": "Code or link from the invitation",
+  "continueLabel": "Continue",
+  "invalidLink": "That is not a valid event link or code.",
+  "cameraDenied": "Camera permission is needed to scan. You can enter the code instead.",
+  "joinCodeLabel": "Join code",
+  "passcodeLabel": "Event passcode",
+  "nameLabel": "Your name (optional)",
+  "nameRequired": "The host asks guests to enter a name.",
+  "phoneLabel": "Mobile number",
+  "sendCode": "Send code",
+  "smsCodeLabel": "6-digit code",
+  "verify": "Verify",
+  "noticeTitle": "Photo notice",
+  "noticeAccept": "I have read the notice and agree to share my photos with this event.",
+  "noticeDraft": "Draft text - pending legal review",
+  "join": "Join event",
+  "joining": "Joining…",
+  "hostedBy": "Hosted by {host}",
+  "@hostedBy": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "statusNotStarted": "This event has not started yet.",
+  "statusClosed": "Uploads are closed. You can still view the gallery.",
+  "statusUnavailable": "This event is not available right now.",
+  "uploadsOff": "Uploads are turned off for this event.",
+  "takePhoto": "Take photo",
+  "choosePhotos": "Choose from gallery",
+  "viewGallery": "View gallery",
+  "galleryLocked": "To browse the gallery, scan the gallery QR or enter its code.",
+  "unlockGallery": "Unlock gallery",
+  "tabCapture": "Capture",
+  "tabQueue": "Uploads",
+  "tabGallery": "Gallery",
+  "tabMine": "Mine",
+  "queueEmpty": "No uploads waiting.",
+  "uploadQueueTitle": "Upload queue",
+  "queued": "Waiting",
+  "preparing": "Preparing…",
+  "uploadingPct": "Uploading {pct}%",
+  "@uploadingPct": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      }
+    }
+  },
+  "retryingIn": "Connection problem. Retrying in {seconds}s",
+  "@retryingIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "waitingNetwork": "Waiting for connection…",
+  "waitingWifi": "Waiting for Wi-Fi to send the original",
+  "processing": "Checking photo…",
+  "pendingApproval": "Sent. Waiting for the host to approve.",
+  "approved": "Visible in the gallery",
+  "rejected": "Not published",
+  "failedLabel": "Upload failed",
+  "duplicate": "Already uploaded",
+  "cancelled": "Cancelled",
+  "retry": "Retry",
+  "cancel": "Cancel",
+  "remove": "Remove",
+  "deletePhoto": "Delete my photo",
+  "sentCount": "{count} photo(s) sent. Thank you!",
+  "@sentCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "capturedCount": "{count} photo(s) captured",
+  "@capturedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "usePhoto": "Add to queue",
+  "discard": "Discard",
+  "draftsTitle": "Drafts on this device",
+  "deleteDraft": "Delete draft",
+  "draftsHint": "Photos you captured but did not send yet. Deleting removes them from this device.",
+  "savedOnDevice": "Saved on this device. Upload continues in the background when a connection is available.",
+  "galleryTitle": "Gallery",
+  "galleryEmpty": "No photos yet. Be the first to share one!",
+  "loadMore": "Load more",
+  "highlights": "Highlights",
+  "all": "All",
+  "save": "Save",
+  "saveToDevice": "Save to device",
+  "saved": "Saved",
+  "downloadOff": "The host turned off downloads.",
+  "report": "Report",
+  "reportTitle": "Report this photo",
+  "reasonInappropriate": "Inappropriate",
+  "reasonPrivacy": "Privacy concern / remove me",
+  "reasonImpersonation": "Impersonation",
+  "reasonCopyright": "Copyright",
+  "reasonOther": "Other",
+  "reportSend": "Send report",
+  "reportThanks": "Thank you. The host will review this photo.",
+  "settings": "Settings",
+  "language": "Language",
+  "dataSaver": "Data saver",
+  "dataSaverHint": "Smaller photos and fewer data. Recommended on mobile data.",
+  "wifiOnlyOriginals": "Send originals on Wi-Fi only",
+  "wifiOnlyOriginalsHint": "On mobile data a smaller version is sent. The original is sent only when you are on Wi-Fi.",
+  "notificationsLabel": "Notifications",
+  "notificationsHint": "Local alerts when your photos are approved or an event closes. No third-party push service is used.",
+  "dataUsage": "Data used by uploads",
+  "dataUsageMobile": "Mobile data: {size}",
+  "@dataUsageMobile": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "dataUsageWifi": "Wi-Fi: {size}",
+  "@dataUsageWifi": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "dataUsageReset": "Reset counters",
+  "leaveEvent": "Leave event",
+  "leaveEventConfirm": "Remove this event from this phone? Photos already uploaded stay in the gallery.",
+  "privacyRequests": "Privacy and removal requests",
+  "privacyBody": "To see, remove or restrict personal data, use the website: {host}/privacy",
+  "@privacyBody": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "ethiopianDate": "Ethiopian date: {date}",
+  "@ethiopianDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "errGeneric": "Something went wrong. Please try again.",
+  "errNetwork": "No connection. Check your network and try again.",
+  "errRateLimited": "Too many attempts. Please wait a moment.",
+  "errOtpInvalid": "That code is not correct or has expired.",
+  "errEventNotFound": "We could not find this event. Check the link or code.",
+  "errCredentialRequired": "A code or passcode is needed to continue.",
+  "errConsentRequired": "Please accept the photo notice to upload.",
+  "errFileTooLarge": "This photo is too large (15 MB maximum).",
+  "errUnsupportedType": "Only JPEG, PNG, WebP or HEIC photos are supported.",
+  "errStorageFull": "This event has run out of storage.",
+  "errMediaLimit": "This event reached its photo limit.",
+  "errOutsideWindow": "Uploads are not open right now.",
+  "errSessionBlocked": "You can no longer contribute to this event.",
+  "errSessionExpired": "Your session expired. Open the event link again.",
+  "errEventState": "This is not possible at this stage of the event.",
+  "people": "People",
+  "you": "You",
+  "guestUnnamed": "Guest",
+  "yours": "Yours",
+  "noPeople": "No named senders yet. Photos appear here once guests add their name.",
+  "layoutGrid": "Grid",
+  "layoutMasonry": "Collage",
+  "layoutList": "Large",
+  "layoutBySender": "By sender",
+  "photosCount": "{count, plural, =1{1 photo} other{{count} photos}}",
+  "@photosCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "minePhotosEmpty": "You haven't added any photos to this event yet.",
+  "allPeople": "All people",
+  "getStarted": "Get started",
+  "splashPromise": "Your memories,\nmade together."
+}
