@@ -1,5 +1,7 @@
 # Tizita Events (Ethiopia Event Photo Sharing Platform)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A private, QR-first collaborative event photo platform built for Ethiopia: **host creates event → pays in ETB (Chapa / telebirr) → shares QR → guests join without an account or app download → capture / upload → quarantine → validation + malware scan → derivatives → moderation → live gallery & venue slideshow → download/share → host export → closure → retention → deletion.**
 
 Authoritative specification: *Ethiopia Event Photo Sharing Platform — Final Product, Feature, Architecture, Compliance and Launch Blueprint*. Everything here follows it; see [`docs/IMPLEMENTATION_MAP.md`](docs/IMPLEMENTATION_MAP.md) for the requirement → code map and [`docs/LEGAL_FLAGS.md`](docs/LEGAL_FLAGS.md) for the legal decisions that still need Ethiopian counsel.

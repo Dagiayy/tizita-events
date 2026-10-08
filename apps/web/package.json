@@ -1,6 +1,7 @@
 {
   "name": "@event/web",
   "version": "1.0.0",
+  "license": "MIT",
   "private": true,
   "description": "Ethiopia Event Photo Sharing Platform - guest PWA, host console and platform admin (Next.js)",
   "scripts": {

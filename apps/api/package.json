@@ -1,6 +1,7 @@
 {
   "name": "@event/api",
   "version": "1.0.0",
+  "license": "MIT",
   "private": true,
   "description": "Ethiopia Event Photo Sharing Platform - API and workers (NestJS)",
   "scripts": {
